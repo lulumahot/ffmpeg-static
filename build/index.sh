@@ -13,7 +13,7 @@ echo using tar executable at $tar_exec
 mkdir -p ../bin
 
 download () {
-	curl -L -# --compressed -A 'https://github.com/eugeneware/ffmpeg-static build script' -o $2 $1
+	curl -L -# --compressed -A 'https://github.com/lulumahot/ffmpeg-static build script' -o $2 $1
 }
 
 echo 'windows x64'
@@ -38,8 +38,8 @@ echo 'linux x64'
 echo '  downloading from johnvansickle.com'
 download 'https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz' linux-x64.tar.xz
 echo '  extracting'
-xzcat linux-x64.tar.xz | $tar_exec -x -C ../bin --strip-components 1 --wildcards '*/ffmpeg'
-mv ../bin/ffmpeg ../bin/linux-x64
+xzcat linux-x64.tar.xz | $tar_exec -x -C ../bin --strip-components 1 --wildcards '*/ffprobe'
+mv ../bin/ffprobe ../bin/linux-x64
 xzcat linux-x64.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/GPLv3.txt' >../bin/linux-x64.LICENSE
 xzcat linux-x64.tar.xz | $tar_exec -x --ignore-case --wildcards -O '**/readme.txt' >../bin/linux-x64.README
 
