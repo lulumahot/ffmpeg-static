@@ -1,7 +1,7 @@
 {
-  "name": "ffmpeg-static",
+  "name": "ffprobe-static",
   "version": "4.4.0",
-  "description": "ffmpeg static binaries for Mac OSX and Linux and Windows",
+  "description": "ffprobe static binaries for Mac OSX and Linux and Windows",
   "main": "index.js",
   "files": [
     "index.js",
@@ -14,16 +14,16 @@
     "lint": "eslint .",
     "prepublishOnly": "npm run lint && npm run install && npm test"
   },
-  "ffmpeg-static": {
+  "ffprobe-static": {
     "binary-release-tag": "b4.4",
     "binary-release-name": "4.4"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eugeneware/ffmpeg-static"
+    "url": "https://github.com/lulumahot/ffmpeg-static"
   },
   "keywords": [
-    "ffmpeg",
+    "ffprobe",
     "static",
     "library",
     "binary",
